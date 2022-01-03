@@ -1,0 +1,16 @@
+.img-thumbnail img{
+    width:100%;
+    border-radius: 3px;
+}
+.img-thumbnail .caption{
+    padding:9px;
+}
+
+/*Comments Setion on Show page of Specific campground */
+.card{
+    margin-top: 20px;
+    background-color: rgb(245,245,245);
+}
+i:hover{
+    cursor: pointer;
+}

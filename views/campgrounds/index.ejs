@@ -1,0 +1,43 @@
+<%- include('../partials/header.ejs') %>
+
+<div class="container">
+    <header class="jumbotron pt-2 pb-3 mt-1 rounded">
+        <div class="container">
+            <h1>Welcome to YelpCamp!</h1>
+            <p>
+                There is no better place to plan your camping than this.<br>
+            </p>
+            <a href="campgrounds/new" class="btn btn-primary">Add a Campground</a>
+        </div>
+    </header>
+
+    <div class="row">
+        <% campgrounds.forEach(camp => {%>
+            <div class="col-md-3 col-sm-6 my-2">
+
+
+                <div class="img-thumbnail">
+                    <img src="<%= camp.image %>" class="img-rounded" style="border-color: transparent;">
+                    <div class="caption text-center">
+                        <h5><%= camp.name %></h5>
+                    </div>
+                    <p class="text-center">
+                        <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+
+
+            </div>
+        <% }); %> 
+    </div>
+</div>
+
+<style>
+    @media (min-width: 1200px) {
+        .container{
+            max-width: 1300px;
+        }
+    }
+</style>
+
+<%- include('../partials/footer.ejs') %>
