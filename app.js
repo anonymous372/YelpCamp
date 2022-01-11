@@ -40,7 +40,7 @@ app.use(flash())
 
 // Passport Configuration
 app.use(require("express-session")({
-    secret: "I am anonymous377",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }))
