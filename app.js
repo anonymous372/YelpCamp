@@ -3,8 +3,9 @@ var express        = require('express'),
     bodyParser     = require('body-parser'),
     flash          = require('connect-flash'),
     methodOverride = require('method-override'),
-    app            = express(),
-    seedDB         = require('./seeds');
+    app            = express();
+    
+//seedDB         = require('./seeds');
 
 //Import Routes 
 var campgroundRoutes = require("./routes/campgrounds"),
